@@ -1,0 +1,273 @@
+{
+	"info": {
+		"_postman_id": "4a9af96e-1fa9-41e5-9d96-e885fd233a06",
+		"name": "Franquicias",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1027247",
+		"_collection_link": "https://ldspostman.postman.co/workspace/Mutual~48dda3f7-03d7-44f7-a3e5-42d00df56446/collection/1027247-4a9af96e-1fa9-41e5-9d96-e885fd233a06?action=share&source=collection_link&creator=1027247"
+	},
+	"item": [
+		{
+			"name": "Listar Productos Sucursal",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Producto #01\",\r\n    \"stock\": 15\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/branch/bd3fa26f-12bb-4bcd-9dde-835039d30b70/product/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"branch",
+						"bd3fa26f-12bb-4bcd-9dde-835039d30b70",
+						"product",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Producto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Producto #01\",\r\n    \"stock\": 15\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/product/54f6c58e-afac-47d1-9ab6-044c9df2800a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"54f6c58e-afac-47d1-9ab6-044c9df2800a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar Producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Producto #2\",\r\n    \"stock\": 12\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/branch/bd3fa26f-12bb-4bcd-9dde-835039d30b70/product/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"branch",
+						"bd3fa26f-12bb-4bcd-9dde-835039d30b70",
+						"product",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Producto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Producto #01\",\r\n    \"stock\": 15\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/product/99132f1d-467f-4d8a-b8f2-3113e63f2016",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"99132f1d-467f-4d8a-b8f2-3113e63f2016"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Sucursal",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Sucursal #002\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/branch/d1bada75-c658-49de-8fec-b9349b3c3aa1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"branch",
+						"d1bada75-c658-49de-8fec-b9349b3c3aa1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar Sucursal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Sucursal #02\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/franchise/c7e5c048-a3ed-44b9-b350-4af89ad23667/branch/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"franchise",
+						"c7e5c048-a3ed-44b9-b350-4af89ad23667",
+						"branch",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Franquicia",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Muebles Envigado 4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/franchise/c7e5c048-a3ed-44b9-b350-4af89ad23667",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"franchise",
+						"c7e5c048-a3ed-44b9-b350-4af89ad23667"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar Franquicia",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Muebles Envigado 2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/franchise",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"franchise"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Productos con Mayor Stock",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/franchise/c7e5c048-a3ed-44b9-b350-4af89ad23667/product/largest-stock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"franchise",
+						"c7e5c048-a3ed-44b9-b350-4af89ad23667",
+						"product",
+						"largest-stock"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
