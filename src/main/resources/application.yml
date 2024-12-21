@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: franchise
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/franchise?serverTimezone=GMT-5&useLegacyDatetimeCode=false
+    username: root
+    password: Lav%BuD4x=lG:AD
