@@ -39,5 +39,4 @@ public class BranchAdapterRepository implements BranchRepository {
 		return this.getBranchAdapterMapper()
 				.toBranch(this.getBranchJpaRepository().save(this.getBranchAdapterMapper().toBranchEntity(branch)));
 	}
-
 }

@@ -18,4 +18,6 @@ public interface BranchAdapterMapper {
 	List<Branch> toBranch(List<BranchEntity> branchEntity);
 
 	BranchEntity toBranchEntity(Branch branch);
+
+	List<BranchEntity> toBranchEntity(List<Branch> branchEntity);
 }

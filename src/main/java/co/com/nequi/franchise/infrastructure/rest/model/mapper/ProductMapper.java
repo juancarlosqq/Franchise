@@ -8,6 +8,7 @@ import org.mapstruct.factory.Mappers;
 
 import co.com.nequi.franchise.domain.model.Product;
 import co.com.nequi.franchise.infrastructure.rest.model.request.ProductRequest;
+import co.com.nequi.franchise.infrastructure.rest.model.response.ProductInformationWithHighStockResponse;
 import co.com.nequi.franchise.infrastructure.rest.model.response.ProductResponse;
 
 @Mapper
@@ -23,4 +24,6 @@ public interface ProductMapper {
 	ProductResponse toProductResponse(Product product);
 
 	List<ProductResponse> toProductResponse(List<Product> product);
+
+	List<ProductInformationWithHighStockResponse> toProductInformationWithHighStockResponse(List<Product> product);
 }

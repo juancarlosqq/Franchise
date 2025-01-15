@@ -18,6 +18,7 @@ import co.com.nequi.franchise.domain.service.ProductService;
 import co.com.nequi.franchise.infrastructure.rest.controller.ProductRestController;
 import co.com.nequi.franchise.infrastructure.rest.model.mapper.ProductMapper;
 import co.com.nequi.franchise.infrastructure.rest.model.request.ProductRequest;
+import co.com.nequi.franchise.infrastructure.rest.model.response.ProductInformationWithHighStockResponse;
 import co.com.nequi.franchise.infrastructure.rest.model.response.ProductResponse;
 import jakarta.validation.Valid;
 import lombok.Getter;
@@ -54,10 +55,11 @@ public class ProductRestControllerImpl implements ProductRestController {
 
 	@Override
 	@GetMapping("/franchise/{uuid-franchise}/product/largest-stock")
-	public ResponseEntity<List<ProductResponse>> findAllProductsWithLargestStockByFranchise(
+	public ResponseEntity<List<ProductInformationWithHighStockResponse>> findAllProductsWithLargestStockByFranchise(
 			@PathVariable(name = "uuid-franchise", required = true) UUID franchiseUuid) {
-		return ResponseEntity.status(HttpStatus.OK).body(this.getProductMapper()
-				.toProductResponse(this.getProductService().findAllProductsWithLargestStockByFranchise(franchiseUuid)));
+		return ResponseEntity.status(HttpStatus.OK)
+				.body(this.getProductMapper().toProductInformationWithHighStockResponse(
+						this.getProductService().findAllProductsWithLargestStockByFranchise(franchiseUuid)));
 	}
 
 	@Override

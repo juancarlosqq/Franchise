@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import co.com.nequi.franchise.infrastructure.rest.model.request.ProductRequest;
+import co.com.nequi.franchise.infrastructure.rest.model.response.ProductInformationWithHighStockResponse;
 import co.com.nequi.franchise.infrastructure.rest.model.response.ProductResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
@@ -20,7 +21,7 @@ public interface ProductRestController {
 	ResponseEntity<List<ProductResponse>> findAllByBranch(
 			@PathVariable(name = "uuid-branch", required = true) UUID branchUuid);
 
-	ResponseEntity<List<ProductResponse>> findAllProductsWithLargestStockByFranchise(
+	ResponseEntity<List<ProductInformationWithHighStockResponse>> findAllProductsWithLargestStockByFranchise(
 			@PathVariable(name = "uuid-franchise", required = true) UUID franchiseUuid);
 
 	ResponseEntity<ProductResponse> registerProduct(
